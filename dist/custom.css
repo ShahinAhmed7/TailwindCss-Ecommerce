@@ -1,0 +1,40 @@
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+h1, 
+h2, 
+h3,
+h4, 
+h5, 
+h6, 
+strong, 
+b{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.owl-nav button {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.owl-nav button i {
+    font-size: 22px;
+    transition: .4s;
+    opacity: .7;
+}
+
+.owl-nav button.owl-next {
+    left: auto;
+    right: 30px;
+}
+
+.owl-nav button:hover i {
+    color: #fa3e57;
+    opacity: 1;
+}

@@ -5,11 +5,149 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./dist/custom.css">
 </head>
 <body>
     
-<h1>Hello World</h1>
+<!-- header -->
+<header class="py-4 shadow-sm bg-white">
+    <div class="container flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#"><img src="dist/images/logo.svg" alt=""></a>
+        <!-- Logo end -->
 
+        <!-- Searchbar -->
+        <div class="w-full max-w-xl relative flex">
+            <span class="absolute left-4 top-3 text-lg text-gray-400">
+                <i class="fas fa-search"></i>
+            </span>
+            <input type="text" class="w-full border border-primary border-r-0 pl-12 py-3 rounded-l-md focus:outline-none" placeholder="Search">
+            <button class="bg-primary border border-primary text-white px-8 rounded-r-md hover:bg-white transition hover:text-primary border-transparent">Search</button>
+        </div>
+        <!-- Searchbar End -->
+
+        <!-- Icons -->
+        <div class="flex items-center space-x-4">
+            <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                <div class="text-2xl">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="text-xs loading-3">Wish List</div>
+                <span class="absolute right-1 top-0 w-5 h-5 rounded-full flex items-center bg-primary text-white text-xs justify-center">8</span>
+            </a>
+            <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                <div class="text-2xl">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="text-xs loading-3">Cart</div>
+                <span class="absolute -right-2 top-0 w-5 h-5 rounded-full flex items-center bg-primary text-white text-xs justify-center">8</span>
+            </a>
+            <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                <div class="text-2xl">
+                    <i class="far fa-user"></i>
+                </div>
+                <div class="text-xs loading-3">Account</div>
+            </a>
+        </div>
+        <!-- Icons end -->
+    </div>
+</header>
+<!-- header end -->
+
+<!-- navbar -->
+<nav class="bg-gray-800">
+    <div class="container">
+        <div class="md:flex md:items-center md:justify-between">
+            <div class="flex items-center justify-between">
+
+                <!-- All category -->
+                <div class="px-6 py-4 bg-primary flex items-center cursor-pointer relative group">
+                    <span class="text-white">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                    <span class="capitalize ml-3 text-white">All categories</span>
+                    <div class="absolute w-full z-10 left-0 top-14 bg-white shadow-md transition duration-500 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 invisible group-hover:visible">
+                        <a class="flex py-3 px-4 items-center hover:bg-gray-100 transition" href="#">
+                            <img class="w-5 h-5 object-contain" src="./dist/images/icons/sofa.svg" alt="">
+                            <span class="ml-4 text-gray-600 text-sm">Bedroom</span>
+                        </a>
+                        <a class="flex py-3 px-4 items-center hover:bg-gray-100 transition" href="#">
+                            <img class="w-5 h-5 object-contain" src="./dist/images/icons/sofa.svg" alt="">
+                            <span class="ml-4 text-gray-600 text-sm">Bedroom</span>
+                        </a>
+                        <a class="flex py-3 px-4 items-center hover:bg-gray-100 transition" href="#">
+                            <img class="w-5 h-5 object-contain" src="./dist/images/icons/sofa.svg" alt="">
+                            <span class="ml-4 text-gray-600 text-sm">Bedroom</span>
+                        </a>
+                        <a class="flex py-3 px-4 items-center hover:bg-gray-100 transition" href="#">
+                            <img class="w-5 h-5 object-contain" src="./dist/images/icons/sofa.svg" alt="">
+                            <span class="ml-4 text-gray-600 text-sm">Bedroom</span>
+                        </a>
+                    </div>
+                </div>
+                 <!-- All category end -->
+
+                <!-- Mobile menu button -->
+                <div class="flex md:hidden">
+                    <button type="button" class="mobile-menu-button text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+            <div class="flex-1 md:flex md:items-center md:justify-between mobile-menu hidden">
+                <div class="flex flex-col -mx-4 md:flex-row md:items-center md:mx-8">
+                    <a href="#" class="px-2 py-1 mx-2 mt-2 text-sm font-medium text-white duration-200 transform rounded-md md:mt-0 hover:text-primary font-poppins">Join Slack</a>
+                    <a href="#" class="px-2 py-1 mx-2 mt-2 text-sm font-medium text-white duration-200 transform rounded-md md:mt-0 hover:text-primary">Join Slack</a>
+                    <a href="#" class="px-2 py-1 mx-2 mt-2 text-sm font-medium text-white duration-200 transform rounded-md md:mt-0 hover:text-primary">Join Slack</a>
+                    <a href="#" class="px-2 py-1 mx-2 mt-2 text-sm font-medium text-white duration-200 transform rounded-md md:mt-0 hover:text-primary">Join Slack</a>
+                </div>
+
+                <div class="flex items-center mt-4 md:mt-0">
+                    <a href="#" class="text-sm font-medium text-white duration-200 transform rounded-md md:mt-0 hover:text-primary"><i class="fas fa-phone-alt"></i> <span class="ml-2">Call: +123 456 7890</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- navbar end -->
+
+<!-- banner -->
+<section class="banner">
+    <div class="activeCarousel owl-carousel owl-theme">
+        <div style="background: url(./dist/images/banner-bg.jpg)no-repeat;background-size: cover; background-position: center;" class="single-carousel py-40">
+            <div class="container flex">
+                <div class="lg:w-6/12 justify-items-center content-center">
+                    <h1 class="text-6xl text-gray-700 pb-6 font-semibold leading-tight">Best Collection For Home Decoration </h1>
+                    <p class="text-lg text-gray-700 mb-9 leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate rhoncus pellentesque
+                        id
+                        integer neque, vel accumsan dolor diam.</p>
+                        <a class="text-xl uppercase px-8 py-4 pb-3 inline-block transition text-white bg-primary rounded rounded-md hover:bg-transparent hover:text-primary leading-snug border-primary border" href="#">Shop now</a>
+                </div>
+            </div>
+        </div>
+        <div style="background: url(./dist/images/banner-2.jpeg)no-repeat;background-size: cover; background-position: center;" class="single-carousel py-40">
+            <div class="container flex">
+                <div class="lg:w-6/12 justify-items-center content-center">
+                    <h1 class="text-6xl text-gray-700 pb-6 font-semibold leading-tight">Best Collection For Home Decoration </h1>
+                    <p class="text-lg text-gray-700 mb-9 leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate rhoncus pellentesque
+                        id
+                        integer neque, vel accumsan dolor diam.</p>
+                        <a class="text-xl uppercase px-8 py-4 pb-3 inline-block transition text-white bg-primary rounded rounded-md hover:bg-transparent hover:text-primary leading-snug border-primary border" href="#">Shop now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- banner end -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="./dist/custom.js"></script>
 </body>
 </html>
